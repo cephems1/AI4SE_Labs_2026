@@ -1,0 +1,504 @@
+{
+  "n_questions": 155,
+  "category_counts": {
+    "best-of": 15,
+    "street-level": 45,
+    "city-level": 49,
+    "off-topic": 1,
+    "region-level": 40,
+    "name-lookup": 5
+  },
+  "noise_counts": {
+    "none": 111,
+    "light": 35,
+    "heavy": 9
+  },
+  "summary": {
+    "APE": {
+      "exact_match": {
+        "mean": 0.27741935483870966,
+        "ci_low": 0.2064516129032258,
+        "ci_high": 0.34838709677419355,
+        "mean_nonempty_gold": 0.0
+      },
+      "prism": {
+        "mean": 0.6240614258064516,
+        "ci_low": 0.5858481209677419,
+        "ci_high": 0.6632918361290322,
+        "mean_nonempty_gold": 0.47972786607142853
+      },
+      "row_f1": {
+        "mean": 0.9707035161290323,
+        "ci_low": 0.9423679214516129,
+        "ci_high": 0.9920536837096774,
+        "mean_nonempty_gold": 0.9594557589285715
+      },
+      "col_f1": {
+        "mean": 0.632258064516129,
+        "ci_low": 0.5967741935483871,
+        "ci_high": 0.6709677419354839,
+        "mean_nonempty_gold": 0.49107142857142855
+      },
+      "outcomes": {
+        "exact": 43,
+        "right_rows_wrong_columns": 100,
+        "partial_overlap": 10,
+        "missed_rows": 2
+      },
+      "full_answer_rate": 0.9225806451612903
+    },
+    "ERA": {
+      "exact_match": {
+        "mean": 0.27741935483870966,
+        "ci_low": 0.2064516129032258,
+        "ci_high": 0.34838709677419355,
+        "mean_nonempty_gold": 0.0
+      },
+      "prism": {
+        "mean": 0.5086436193548387,
+        "ci_low": 0.4514662932258064,
+        "ci_high": 0.565987286451613,
+        "mean_nonempty_gold": 0.3199978660714286
+      },
+      "row_f1": {
+        "mean": 0.7398678645161291,
+        "ci_low": 0.6721889767741935,
+        "ci_high": 0.8041947762903225,
+        "mean_nonempty_gold": 0.6399957053571429
+      },
+      "col_f1": {
+        "mean": 0.6,
+        "ci_low": 0.5548387096774193,
+        "ci_high": 0.6451612903225806,
+        "mean_nonempty_gold": 0.44642857142857145
+      },
+      "outcomes": {
+        "exact": 43,
+        "right_rows_wrong_columns": 63,
+        "partial_overlap": 37,
+        "missed_rows": 11,
+        "disjoint": 1
+      },
+      "full_answer_rate": 0.6838709677419355
+    },
+    "CRISP": {
+      "exact_match": {
+        "mean": 0.27741935483870966,
+        "ci_low": 0.2064516129032258,
+        "ci_high": 0.34838709677419355,
+        "mean_nonempty_gold": 0.0
+      },
+      "prism": {
+        "mean": 0.5568570129032259,
+        "ci_low": 0.5043089153225806,
+        "ci_high": 0.6086872427419354,
+        "mean_nonempty_gold": 0.38672175892857147
+      },
+      "row_f1": {
+        "mean": 0.8362946774193548,
+        "ci_low": 0.7783226688709677,
+        "ci_high": 0.8923085795161287,
+        "mean_nonempty_gold": 0.7734435267857143
+      },
+      "col_f1": {
+        "mean": 0.5612903225806452,
+        "ci_low": 0.5096774193548387,
+        "ci_high": 0.6129032258064516,
+        "mean_nonempty_gold": 0.39285714285714285
+      },
+      "outcomes": {
+        "exact": 43,
+        "right_rows_wrong_columns": 80,
+        "partial_overlap": 8,
+        "missed_rows": 22,
+        "disjoint": 2
+      },
+      "full_answer_rate": 0.7935483870967742
+    }
+  },
+  "tests": {
+    "exact_match": {
+      "cochran_q": [
+        0.0,
+        1.0
+      ]
+    },
+    "full_answer": {
+      "cochran_q": [
+        45.733333333333334,
+        1.1725539854121493e-10
+      ],
+      "mcnemar": [
+        {
+          "pair": "APE vs ERA",
+          "only_first": 37,
+          "only_second": 0,
+          "p": 1.4551915228366852e-11,
+          "p_holm": 4.3655745685100555e-11
+        },
+        {
+          "pair": "APE vs CRISP",
+          "only_first": 20,
+          "only_second": 0,
+          "p": 1.9073486328125e-06,
+          "p_holm": 3.814697265625e-06
+        },
+        {
+          "pair": "ERA vs CRISP",
+          "only_first": 8,
+          "only_second": 25,
+          "p": 0.004551384132355452,
+          "p_holm": 0.004551384132355452
+        }
+      ]
+    },
+    "prism": {
+      "all_questions": {
+        "friedman_chi2": 41.38853503184721,
+        "friedman_p": 1.0294228660961642e-09,
+        "kendall_w": 0.1335114033285394,
+        "pairwise": [
+          {
+            "pair": "APE vs ERA",
+            "mean_diff": 0.1154178064516129,
+            "ci_low": 0.08432779629032258,
+            "ci_high": 0.14769268419354836,
+            "wins": 39,
+            "losses": 0,
+            "ties": 116,
+            "wilcoxon_p": 5.019584484952195e-08,
+            "permutation_p": 9.999000099990002e-05,
+            "rank_biserial": 1.0,
+            "wilcoxon_p_holm": 1.5058753454856586e-07,
+            "permutation_p_holm": 0.00029997000299970003
+          },
+          {
+            "pair": "APE vs CRISP",
+            "mean_diff": 0.0672044129032258,
+            "ci_low": 0.0418394035483871,
+            "ci_high": 0.09455638451612904,
+            "wins": 24,
+            "losses": 0,
+            "ties": 131,
+            "wilcoxon_p": 6.339895402968972e-06,
+            "permutation_p": 9.999000099990002e-05,
+            "rank_biserial": 1.0,
+            "wilcoxon_p_holm": 1.2679790805937944e-05,
+            "permutation_p_holm": 0.00029997000299970003
+          },
+          {
+            "pair": "ERA vs CRISP",
+            "mean_diff": -0.04821339354838709,
+            "ci_low": -0.08234887096774193,
+            "ci_high": -0.014364318548387095,
+            "wins": 18,
+            "losses": 27,
+            "ties": 110,
+            "wilcoxon_p": 0.09250393374615966,
+            "permutation_p": 0.005599440055994401,
+            "rank_biserial": -0.28695652173913044,
+            "wilcoxon_p_holm": 0.09250393374615966,
+            "permutation_p_holm": 0.005599440055994401
+          }
+        ]
+      },
+      "nonempty_gold": {
+        "friedman_chi2": 41.38853503184694,
+        "friedman_p": 1.0294228660963028e-09,
+        "kendall_w": 0.18477024567788813,
+        "pairwise": [
+          {
+            "pair": "APE vs ERA",
+            "mean_diff": 0.15973,
+            "ci_low": 0.11972666785714288,
+            "ci_high": 0.20265199084821425,
+            "wins": 39,
+            "losses": 0,
+            "ties": 73,
+            "wilcoxon_p": 5.019584484952195e-08,
+            "permutation_p": 9.999000099990002e-05,
+            "rank_biserial": 1.0,
+            "wilcoxon_p_holm": 1.5058753454856586e-07,
+            "permutation_p_holm": 0.00029997000299970003
+          },
+          {
+            "pair": "APE vs CRISP",
+            "mean_diff": 0.09300610714285715,
+            "ci_low": 0.05886216964285714,
+            "ci_high": 0.128842509375,
+            "wins": 24,
+            "losses": 0,
+            "ties": 88,
+            "wilcoxon_p": 6.339895402968972e-06,
+            "permutation_p": 9.999000099990002e-05,
+            "rank_biserial": 1.0,
+            "wilcoxon_p_holm": 1.2679790805937944e-05,
+            "permutation_p_holm": 0.00029997000299970003
+          },
+          {
+            "pair": "ERA vs CRISP",
+            "mean_diff": -0.06672389285714286,
+            "ci_low": -0.11498061808035713,
+            "ci_high": -0.019673252455357143,
+            "wins": 18,
+            "losses": 27,
+            "ties": 67,
+            "wilcoxon_p": 0.09250393374615966,
+            "permutation_p": 0.006299370062993701,
+            "rank_biserial": -0.28695652173913044,
+            "wilcoxon_p_holm": 0.09250393374615966,
+            "permutation_p_holm": 0.006299370062993701
+          }
+        ]
+      }
+    },
+    "row_f1": {
+      "all_questions": {
+        "friedman_chi2": 41.38853503184721,
+        "friedman_p": 1.0294228660961642e-09,
+        "kendall_w": 0.1335114033285394,
+        "pairwise": [
+          {
+            "pair": "APE vs ERA",
+            "mean_diff": 0.23083565161290326,
+            "ci_low": 0.16775252838709676,
+            "ci_high": 0.2963723056451613,
+            "wins": 39,
+            "losses": 0,
+            "ties": 116,
+            "wilcoxon_p": 5.019584484952195e-08,
+            "permutation_p": 9.999000099990002e-05,
+            "rank_biserial": 1.0,
+            "wilcoxon_p_holm": 1.5058753454856586e-07,
+            "permutation_p_holm": 0.00029997000299970003
+          },
+          {
+            "pair": "APE vs CRISP",
+            "mean_diff": 0.13440883870967743,
+            "ci_low": 0.08547084741935485,
+            "ci_high": 0.18848352258064516,
+            "wins": 24,
+            "losses": 0,
+            "ties": 131,
+            "wilcoxon_p": 6.339895402968972e-06,
+            "permutation_p": 9.999000099990002e-05,
+            "rank_biserial": 1.0,
+            "wilcoxon_p_holm": 1.2679790805937944e-05,
+            "permutation_p_holm": 0.00029997000299970003
+          },
+          {
+            "pair": "ERA vs CRISP",
+            "mean_diff": -0.09642681290322581,
+            "ci_low": -0.16518876854838707,
+            "ci_high": -0.029387969838709685,
+            "wins": 18,
+            "losses": 27,
+            "ties": 110,
+            "wilcoxon_p": 0.09250393374615966,
+            "permutation_p": 0.007499250074992501,
+            "rank_biserial": -0.28695652173913044,
+            "wilcoxon_p_holm": 0.09250393374615966,
+            "permutation_p_holm": 0.007499250074992501
+          }
+        ]
+      },
+      "nonempty_gold": {
+        "friedman_chi2": 41.38853503184694,
+        "friedman_p": 1.0294228660963028e-09,
+        "kendall_w": 0.18477024567788813,
+        "pairwise": [
+          {
+            "pair": "APE vs ERA",
+            "mean_diff": 0.3194600535714286,
+            "ci_low": 0.23822168973214286,
+            "ci_high": 0.40283102968750006,
+            "wins": 39,
+            "losses": 0,
+            "ties": 73,
+            "wilcoxon_p": 5.019584484952195e-08,
+            "permutation_p": 9.999000099990002e-05,
+            "rank_biserial": 1.0,
+            "wilcoxon_p_holm": 1.5058753454856586e-07,
+            "permutation_p_holm": 0.00029997000299970003
+          },
+          {
+            "pair": "APE vs CRISP",
+            "mean_diff": 0.18601223214285717,
+            "ci_low": 0.1175059017857143,
+            "ci_high": 0.25884880424107143,
+            "wins": 24,
+            "losses": 0,
+            "ties": 88,
+            "wilcoxon_p": 6.339895402968972e-06,
+            "permutation_p": 9.999000099990002e-05,
+            "rank_biserial": 1.0,
+            "wilcoxon_p_holm": 1.2679790805937944e-05,
+            "permutation_p_holm": 0.00029997000299970003
+          },
+          {
+            "pair": "ERA vs CRISP",
+            "mean_diff": -0.13344782142857145,
+            "ci_low": -0.22915543749999998,
+            "ci_high": -0.040208023883928586,
+            "wins": 18,
+            "losses": 27,
+            "ties": 67,
+            "wilcoxon_p": 0.09250393374615966,
+            "permutation_p": 0.004999500049995001,
+            "rank_biserial": -0.28695652173913044,
+            "wilcoxon_p_holm": 0.09250393374615966,
+            "permutation_p_holm": 0.004999500049995001
+          }
+        ]
+      }
+    }
+  },
+  "row_f1_by_category": {
+    "best-of": {
+      "APE": 1.0,
+      "ERA": 0.9333333333333333,
+      "CRISP": 1.0
+    },
+    "city-level": {
+      "APE": 0.9947361020408163,
+      "ERA": 0.9191088979591838,
+      "CRISP": 0.8518789591836735
+    },
+    "street-level": {
+      "APE": 0.9925926,
+      "ERA": 0.3655398666666667,
+      "CRISP": 0.7533333333333333
+    },
+    "region-level": {
+      "APE": 0.9262577249999999,
+      "ERA": 0.854847225,
+      "CRISP": 0.8495901499999998
+    },
+    "name-lookup": {
+      "APE": 1.0,
+      "ERA": 1.0,
+      "CRISP": 1.0
+    },
+    "off-topic": {
+      "APE": 0.0,
+      "ERA": 0.0,
+      "CRISP": 0.0
+    }
+  },
+  "prism_by_category": {
+    "best-of": {
+      "APE": 0.9,
+      "ERA": 0.8666666666666667,
+      "CRISP": 0.9
+    },
+    "city-level": {
+      "APE": 0.6198170204081633,
+      "ERA": 0.5820034285714286,
+      "CRISP": 0.5483884489795918
+    },
+    "street-level": {
+      "APE": 0.6296296222222222,
+      "ERA": 0.31610328888888883,
+      "CRISP": 0.51
+    },
+    "region-level": {
+      "APE": 0.48812885,
+      "ERA": 0.45242362500000005,
+      "CRISP": 0.44979507499999993
+    },
+    "name-lookup": {
+      "APE": 1.0,
+      "ERA": 1.0,
+      "CRISP": 1.0
+    },
+    "off-topic": {
+      "APE": 0.0,
+      "ERA": 0.0,
+      "CRISP": 0.0
+    }
+  },
+  "row_f1_by_noise": {
+    "none": {
+      "APE": 0.9678162252252254,
+      "ERA": 0.7432020720720721,
+      "CRISP": 0.8526352252252251
+    },
+    "light": {
+      "APE": 0.9728079714285714,
+      "ERA": 0.7447961714285715,
+      "CRISP": 0.8
+    },
+    "heavy": {
+      "APE": 0.9981294444444444,
+      "ERA": 0.6795803333333333,
+      "CRISP": 0.7759072222222222
+    }
+  },
+  "row_f1_friedman_by_category": {
+    "best-of": {
+      "friedman_chi2": 1.9999999999998845,
+      "friedman_p": 0.3678794411714636,
+      "kendall_w": 0.06666666666666282
+    },
+    "city-level": {
+      "friedman_chi2": 7.806451612902888,
+      "friedman_p": 0.020176720161037207,
+      "kendall_w": 0.07965766951941722
+    },
+    "street-level": {
+      "friedman_chi2": 39.79047619047619,
+      "friedman_p": 2.2888001807111906e-09,
+      "kendall_w": 0.44211640211640213
+    },
+    "region-level": {
+      "friedman_chi2": 9.33333333333343,
+      "friedman_p": 0.009403562551494757,
+      "kendall_w": 0.11666666666666788
+    }
+  },
+  "noise_kruskal": {
+    "APE": {
+      "H": 0.3643132969774018,
+      "p": 0.8334707682528131
+    },
+    "ERA": {
+      "H": 0.52933363852713,
+      "p": 0.7674616108075331
+    },
+    "CRISP": {
+      "H": 0.8670509430117928,
+      "p": 0.6482197812713608
+    }
+  },
+  "sql_features": {
+    "APE": {
+      "street_questions_with_street_filter": 45,
+      "street_questions_using_like": 45,
+      "street_questions": 45,
+      "region_questions_joining_geographic": 39,
+      "region_questions": 40,
+      "queries_with_polluted_literal": 0
+    },
+    "ERA": {
+      "street_questions_with_street_filter": 10,
+      "street_questions_using_like": 0,
+      "street_questions": 45,
+      "region_questions_joining_geographic": 40,
+      "region_questions": 40,
+      "queries_with_polluted_literal": 15
+    },
+    "CRISP": {
+      "street_questions_with_street_filter": 45,
+      "street_questions_using_like": 0,
+      "street_questions": 45,
+      "region_questions_joining_geographic": 34,
+      "region_questions": 40,
+      "queries_with_polluted_literal": 20
+    }
+  },
+  "identical_sql": {
+    "APE vs ERA": 50,
+    "APE vs CRISP": 85,
+    "ERA vs CRISP": 43
+  }
+}
