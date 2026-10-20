@@ -1,0 +1,38 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	load_corpus(load_corpus)
+	extract(extract)
+	collect_round(collect_round)
+	completeness_check(completeness_check)
+	coverage_gate(coverage_gate)
+	build_taxonomy(build_taxonomy)
+	consolidate(consolidate)
+	validate(validate)
+	review(review)
+	revise(revise)
+	render(render)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> load_corpus;
+	build_taxonomy -.-> consolidate;
+	build_taxonomy -.-> validate;
+	collect_round -.-> completeness_check;
+	completeness_check --> coverage_gate;
+	consolidate --> validate;
+	coverage_gate -.-> build_taxonomy;
+	coverage_gate -.-> extract;
+	extract --> collect_round;
+	load_corpus -.-> extract;
+	review -.-> render;
+	review -.-> revise;
+	revise --> review;
+	validate -.-> consolidate;
+	validate -.-> review;
+	render --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc

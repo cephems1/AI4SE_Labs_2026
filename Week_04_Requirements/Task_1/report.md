@@ -1,0 +1,3 @@
+Myslim si ze desing choices su paradne opisane v report_by_ai.md. Network obsahuje 6 LLM nodes, 5 deterministickych vrcholov a 3 feedback loopy na checkovanie outputu, pri tych feedback loopoch je aj pouzity iny model, kedze ine modely robia ine chyby... 
+
+Beh trval 801 sekund - cca 13 minut, nasiel 142 requirementov, 5 bolo zahodenych. outputom je samozrejme requirements.md a graph.mmd 
