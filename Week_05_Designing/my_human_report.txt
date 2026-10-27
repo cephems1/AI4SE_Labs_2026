@@ -1,0 +1,5 @@
+Cez skills to pocitovo bezalo dlhsie, mam pocit ze isiel viac do detajlov, viac veci specifikoval, ale 
+velka vyhoda bola ze som sa toho ani nemusel doktnut, stacil jeden prompt a uz si isiel. 
+
+Architekturu si zvolili rovnaku architekturu, s PostgreSQL databazov. Skore na vyber architektury bolo skoro
+rovnake. Rozdiel je v pocte modulov a este par nejakymi detajlami, ale nic markantne. 
