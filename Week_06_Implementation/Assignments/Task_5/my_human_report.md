@@ -1,0 +1,1 @@
+Pre kazdy task pipeline zobral top 5 matchin chunkov, poslal ich gpt-6-luna spolu s staskom a returnol metodu. 472 z 481 unit testov passed.
