@@ -1,0 +1,877 @@
+{
+  "minilm": {
+    "model": "sentence-transformers/all-MiniLM-L6-v2",
+    "dims": 384,
+    "params_M": 23,
+    "max_tokens": 256,
+    "truncated": 92,
+    "load_s": 20.1,
+    "embed_s": 3.2,
+    "full": {
+      "MRR": 0.6499999999999999,
+      "Hit@1": 0.4,
+      "Hit@5": 0.9,
+      "P@5": 0.82,
+      "per_task": [
+        {
+          "task": "OrderStatus.is_terminal",
+          "target_rank": 2,
+          "p@5": 0.4
+        },
+        {
+          "task": "InventoryLedger.__contains__",
+          "target_rank": 1,
+          "p@5": 1.0
+        },
+        {
+          "task": "Warehouse.stock_report",
+          "target_rank": 2,
+          "p@5": 0.6
+        },
+        {
+          "task": "OrderStateMachine.transition",
+          "target_rank": 1,
+          "p@5": 0.8
+        },
+        {
+          "task": "OrderLog.by_status",
+          "target_rank": 1,
+          "p@5": 0.8
+        },
+        {
+          "task": "Customer.can_afford",
+          "target_rank": 2,
+          "p@5": 1.0
+        },
+        {
+          "task": "Order.__len__",
+          "target_rank": 2,
+          "p@5": 0.6
+        },
+        {
+          "task": "BulkDiscountPricing.price",
+          "target_rank": 6,
+          "p@5": 1.0
+        },
+        {
+          "task": "EventBus.__contains__",
+          "target_rank": 1,
+          "p@5": 1.0
+        },
+        {
+          "task": "Money.__bool__",
+          "target_rank": 3,
+          "p@5": 1.0
+        }
+      ]
+    },
+    "doc": {
+      "MRR": 0.09452320410203854,
+      "Hit@1": 0.0,
+      "Hit@5": 0.2,
+      "P@5": 0.54,
+      "per_task": [
+        {
+          "task": "OrderStatus.is_terminal",
+          "target_rank": 75,
+          "p@5": 0.0
+        },
+        {
+          "task": "InventoryLedger.__contains__",
+          "target_rank": 29,
+          "p@5": 1.0
+        },
+        {
+          "task": "Warehouse.stock_report",
+          "target_rank": 106,
+          "p@5": 0.0
+        },
+        {
+          "task": "OrderStateMachine.transition",
+          "target_rank": 3,
+          "p@5": 0.6
+        },
+        {
+          "task": "OrderLog.by_status",
+          "target_rank": 3,
+          "p@5": 0.4
+        },
+        {
+          "task": "Customer.can_afford",
+          "target_rank": 50,
+          "p@5": 1.0
+        },
+        {
+          "task": "Order.__len__",
+          "target_rank": 30,
+          "p@5": 0.4
+        },
+        {
+          "task": "BulkDiscountPricing.price",
+          "target_rank": 72,
+          "p@5": 0.6
+        },
+        {
+          "task": "EventBus.__contains__",
+          "target_rank": 7,
+          "p@5": 1.0
+        },
+        {
+          "task": "Money.__bool__",
+          "target_rank": 89,
+          "p@5": 0.4
+        }
+      ]
+    }
+  },
+  "bge-small": {
+    "model": "BAAI/bge-small-en-v1.5",
+    "dims": 384,
+    "params_M": 33,
+    "max_tokens": 512,
+    "truncated": 36,
+    "load_s": 0.9,
+    "embed_s": 5.8,
+    "full": {
+      "MRR": 0.5291666666666666,
+      "Hit@1": 0.3,
+      "Hit@5": 0.8,
+      "P@5": 0.8,
+      "per_task": [
+        {
+          "task": "OrderStatus.is_terminal",
+          "target_rank": 2,
+          "p@5": 0.4
+        },
+        {
+          "task": "InventoryLedger.__contains__",
+          "target_rank": 1,
+          "p@5": 1.0
+        },
+        {
+          "task": "Warehouse.stock_report",
+          "target_rank": 3,
+          "p@5": 0.6
+        },
+        {
+          "task": "OrderStateMachine.transition",
+          "target_rank": 2,
+          "p@5": 0.8
+        },
+        {
+          "task": "OrderLog.by_status",
+          "target_rank": 1,
+          "p@5": 0.8
+        },
+        {
+          "task": "Customer.can_afford",
+          "target_rank": 3,
+          "p@5": 1.0
+        },
+        {
+          "task": "Order.__len__",
+          "target_rank": 3,
+          "p@5": 0.4
+        },
+        {
+          "task": "BulkDiscountPricing.price",
+          "target_rank": 6,
+          "p@5": 1.0
+        },
+        {
+          "task": "EventBus.__contains__",
+          "target_rank": 1,
+          "p@5": 1.0
+        },
+        {
+          "task": "Money.__bool__",
+          "target_rank": 8,
+          "p@5": 1.0
+        }
+      ]
+    },
+    "doc": {
+      "MRR": 0.07431084697362587,
+      "Hit@1": 0.0,
+      "Hit@5": 0.1,
+      "P@5": 0.52,
+      "per_task": [
+        {
+          "task": "OrderStatus.is_terminal",
+          "target_rank": 14,
+          "p@5": 0.2
+        },
+        {
+          "task": "InventoryLedger.__contains__",
+          "target_rank": 16,
+          "p@5": 0.8
+        },
+        {
+          "task": "Warehouse.stock_report",
+          "target_rank": 102,
+          "p@5": 0.0
+        },
+        {
+          "task": "OrderStateMachine.transition",
+          "target_rank": 4,
+          "p@5": 0.6
+        },
+        {
+          "task": "OrderLog.by_status",
+          "target_rank": 9,
+          "p@5": 0.4
+        },
+        {
+          "task": "Customer.can_afford",
+          "target_rank": 34,
+          "p@5": 0.4
+        },
+        {
+          "task": "Order.__len__",
+          "target_rank": 52,
+          "p@5": 0.4
+        },
+        {
+          "task": "BulkDiscountPricing.price",
+          "target_rank": 58,
+          "p@5": 0.4
+        },
+        {
+          "task": "EventBus.__contains__",
+          "target_rank": 6,
+          "p@5": 1.0
+        },
+        {
+          "task": "Money.__bool__",
+          "target_rank": 175,
+          "p@5": 1.0
+        }
+      ]
+    }
+  },
+  "bge-base": {
+    "model": "BAAI/bge-base-en-v1.5",
+    "dims": 768,
+    "params_M": 109,
+    "max_tokens": 512,
+    "truncated": 36,
+    "load_s": 1.2,
+    "embed_s": 18.7,
+    "full": {
+      "MRR": 0.5116666666666666,
+      "Hit@1": 0.2,
+      "Hit@5": 0.9,
+      "P@5": 0.8,
+      "per_task": [
+        {
+          "task": "OrderStatus.is_terminal",
+          "target_rank": 2,
+          "p@5": 0.4
+        },
+        {
+          "task": "InventoryLedger.__contains__",
+          "target_rank": 2,
+          "p@5": 1.0
+        },
+        {
+          "task": "Warehouse.stock_report",
+          "target_rank": 2,
+          "p@5": 0.6
+        },
+        {
+          "task": "OrderStateMachine.transition",
+          "target_rank": 2,
+          "p@5": 0.8
+        },
+        {
+          "task": "OrderLog.by_status",
+          "target_rank": 1,
+          "p@5": 0.8
+        },
+        {
+          "task": "Customer.can_afford",
+          "target_rank": 2,
+          "p@5": 1.0
+        },
+        {
+          "task": "Order.__len__",
+          "target_rank": 4,
+          "p@5": 0.4
+        },
+        {
+          "task": "BulkDiscountPricing.price",
+          "target_rank": 6,
+          "p@5": 1.0
+        },
+        {
+          "task": "EventBus.__contains__",
+          "target_rank": 1,
+          "p@5": 1.0
+        },
+        {
+          "task": "Money.__bool__",
+          "target_rank": 5,
+          "p@5": 1.0
+        }
+      ]
+    },
+    "doc": {
+      "MRR": 0.1074769675999184,
+      "Hit@1": 0.0,
+      "Hit@5": 0.2,
+      "P@5": 0.5399999999999999,
+      "per_task": [
+        {
+          "task": "OrderStatus.is_terminal",
+          "target_rank": 16,
+          "p@5": 0.0
+        },
+        {
+          "task": "InventoryLedger.__contains__",
+          "target_rank": 9,
+          "p@5": 0.8
+        },
+        {
+          "task": "Warehouse.stock_report",
+          "target_rank": 56,
+          "p@5": 0.0
+        },
+        {
+          "task": "OrderStateMachine.transition",
+          "target_rank": 5,
+          "p@5": 0.6
+        },
+        {
+          "task": "OrderLog.by_status",
+          "target_rank": 3,
+          "p@5": 0.6
+        },
+        {
+          "task": "Customer.can_afford",
+          "target_rank": 7,
+          "p@5": 0.8
+        },
+        {
+          "task": "Order.__len__",
+          "target_rank": 48,
+          "p@5": 0.2
+        },
+        {
+          "task": "BulkDiscountPricing.price",
+          "target_rank": 37,
+          "p@5": 0.6
+        },
+        {
+          "task": "EventBus.__contains__",
+          "target_rank": 7,
+          "p@5": 1.0
+        },
+        {
+          "task": "Money.__bool__",
+          "target_rank": 61,
+          "p@5": 0.8
+        }
+      ]
+    }
+  },
+  "bge-large": {
+    "model": "BAAI/bge-large-en-v1.5",
+    "dims": 1024,
+    "params_M": 335,
+    "max_tokens": 512,
+    "truncated": 36,
+    "load_s": 56.1,
+    "embed_s": 215.5,
+    "full": {
+      "MRR": 0.795,
+      "Hit@1": 0.7,
+      "Hit@5": 1.0,
+      "P@5": 0.8,
+      "per_task": [
+        {
+          "task": "OrderStatus.is_terminal",
+          "target_rank": 1,
+          "p@5": 0.4
+        },
+        {
+          "task": "InventoryLedger.__contains__",
+          "target_rank": 1,
+          "p@5": 1.0
+        },
+        {
+          "task": "Warehouse.stock_report",
+          "target_rank": 1,
+          "p@5": 0.6
+        },
+        {
+          "task": "OrderStateMachine.transition",
+          "target_rank": 2,
+          "p@5": 0.8
+        },
+        {
+          "task": "OrderLog.by_status",
+          "target_rank": 1,
+          "p@5": 0.8
+        },
+        {
+          "task": "Customer.can_afford",
+          "target_rank": 1,
+          "p@5": 1.0
+        },
+        {
+          "task": "Order.__len__",
+          "target_rank": 4,
+          "p@5": 0.4
+        },
+        {
+          "task": "BulkDiscountPricing.price",
+          "target_rank": 5,
+          "p@5": 1.0
+        },
+        {
+          "task": "EventBus.__contains__",
+          "target_rank": 1,
+          "p@5": 1.0
+        },
+        {
+          "task": "Money.__bool__",
+          "target_rank": 1,
+          "p@5": 1.0
+        }
+      ]
+    },
+    "doc": {
+      "MRR": 0.21401907732790085,
+      "Hit@1": 0.1,
+      "Hit@5": 0.3,
+      "P@5": 0.5800000000000001,
+      "per_task": [
+        {
+          "task": "OrderStatus.is_terminal",
+          "target_rank": 12,
+          "p@5": 0.0
+        },
+        {
+          "task": "InventoryLedger.__contains__",
+          "target_rank": 17,
+          "p@5": 0.8
+        },
+        {
+          "task": "Warehouse.stock_report",
+          "target_rank": 22,
+          "p@5": 0.0
+        },
+        {
+          "task": "OrderStateMachine.transition",
+          "target_rank": 3,
+          "p@5": 0.6
+        },
+        {
+          "task": "OrderLog.by_status",
+          "target_rank": 1,
+          "p@5": 0.6
+        },
+        {
+          "task": "Customer.can_afford",
+          "target_rank": 3,
+          "p@5": 1.0
+        },
+        {
+          "task": "Order.__len__",
+          "target_rank": 40,
+          "p@5": 0.2
+        },
+        {
+          "task": "BulkDiscountPricing.price",
+          "target_rank": 16,
+          "p@5": 0.6
+        },
+        {
+          "task": "EventBus.__contains__",
+          "target_rank": 7,
+          "p@5": 1.0
+        },
+        {
+          "task": "Money.__bool__",
+          "target_rank": 18,
+          "p@5": 1.0
+        }
+      ]
+    }
+  },
+  "e5-base": {
+    "model": "intfloat/e5-base-v2",
+    "dims": 768,
+    "params_M": 109,
+    "max_tokens": 512,
+    "truncated": 36,
+    "load_s": 42.8,
+    "embed_s": 62.5,
+    "full": {
+      "MRR": 0.6166666666666666,
+      "Hit@1": 0.4,
+      "Hit@5": 0.9,
+      "P@5": 0.8,
+      "per_task": [
+        {
+          "task": "OrderStatus.is_terminal",
+          "target_rank": 1,
+          "p@5": 0.6
+        },
+        {
+          "task": "InventoryLedger.__contains__",
+          "target_rank": 1,
+          "p@5": 1.0
+        },
+        {
+          "task": "Warehouse.stock_report",
+          "target_rank": 2,
+          "p@5": 0.6
+        },
+        {
+          "task": "OrderStateMachine.transition",
+          "target_rank": 2,
+          "p@5": 0.8
+        },
+        {
+          "task": "OrderLog.by_status",
+          "target_rank": 1,
+          "p@5": 0.6
+        },
+        {
+          "task": "Customer.can_afford",
+          "target_rank": 3,
+          "p@5": 1.0
+        },
+        {
+          "task": "Order.__len__",
+          "target_rank": 3,
+          "p@5": 0.4
+        },
+        {
+          "task": "BulkDiscountPricing.price",
+          "target_rank": 6,
+          "p@5": 1.0
+        },
+        {
+          "task": "EventBus.__contains__",
+          "target_rank": 1,
+          "p@5": 1.0
+        },
+        {
+          "task": "Money.__bool__",
+          "target_rank": 3,
+          "p@5": 1.0
+        }
+      ]
+    },
+    "doc": {
+      "MRR": 0.08222661792635685,
+      "Hit@1": 0.0,
+      "Hit@5": 0.2,
+      "P@5": 0.5800000000000001,
+      "per_task": [
+        {
+          "task": "OrderStatus.is_terminal",
+          "target_rank": 39,
+          "p@5": 0.0
+        },
+        {
+          "task": "InventoryLedger.__contains__",
+          "target_rank": 18,
+          "p@5": 0.8
+        },
+        {
+          "task": "Warehouse.stock_report",
+          "target_rank": 53,
+          "p@5": 0.0
+        },
+        {
+          "task": "OrderStateMachine.transition",
+          "target_rank": 4,
+          "p@5": 0.6
+        },
+        {
+          "task": "OrderLog.by_status",
+          "target_rank": 4,
+          "p@5": 0.4
+        },
+        {
+          "task": "Customer.can_afford",
+          "target_rank": 15,
+          "p@5": 0.8
+        },
+        {
+          "task": "Order.__len__",
+          "target_rank": 76,
+          "p@5": 0.2
+        },
+        {
+          "task": "BulkDiscountPricing.price",
+          "target_rank": 31,
+          "p@5": 1.0
+        },
+        {
+          "task": "EventBus.__contains__",
+          "target_rank": 16,
+          "p@5": 1.0
+        },
+        {
+          "task": "Money.__bool__",
+          "target_rank": 21,
+          "p@5": 1.0
+        }
+      ]
+    }
+  },
+  "arctic-m": {
+    "model": "Snowflake/snowflake-arctic-embed-m-v1.5",
+    "dims": 768,
+    "params_M": 109,
+    "max_tokens": 512,
+    "truncated": 36,
+    "load_s": 36.4,
+    "embed_s": 34.0,
+    "full": {
+      "MRR": 0.40214285714285714,
+      "Hit@1": 0.1,
+      "Hit@5": 0.8,
+      "P@5": 0.76,
+      "per_task": [
+        {
+          "task": "OrderStatus.is_terminal",
+          "target_rank": 2,
+          "p@5": 0.4
+        },
+        {
+          "task": "InventoryLedger.__contains__",
+          "target_rank": 1,
+          "p@5": 1.0
+        },
+        {
+          "task": "Warehouse.stock_report",
+          "target_rank": 14,
+          "p@5": 0.6
+        },
+        {
+          "task": "OrderStateMachine.transition",
+          "target_rank": 4,
+          "p@5": 0.8
+        },
+        {
+          "task": "OrderLog.by_status",
+          "target_rank": 2,
+          "p@5": 0.8
+        },
+        {
+          "task": "Customer.can_afford",
+          "target_rank": 2,
+          "p@5": 0.8
+        },
+        {
+          "task": "Order.__len__",
+          "target_rank": 3,
+          "p@5": 0.2
+        },
+        {
+          "task": "BulkDiscountPricing.price",
+          "target_rank": 6,
+          "p@5": 1.0
+        },
+        {
+          "task": "EventBus.__contains__",
+          "target_rank": 2,
+          "p@5": 1.0
+        },
+        {
+          "task": "Money.__bool__",
+          "target_rank": 5,
+          "p@5": 1.0
+        }
+      ]
+    },
+    "doc": {
+      "MRR": 0.06145225190347141,
+      "Hit@1": 0.0,
+      "Hit@5": 0.1,
+      "P@5": 0.42000000000000004,
+      "per_task": [
+        {
+          "task": "OrderStatus.is_terminal",
+          "target_rank": 27,
+          "p@5": 0.0
+        },
+        {
+          "task": "InventoryLedger.__contains__",
+          "target_rank": 25,
+          "p@5": 0.8
+        },
+        {
+          "task": "Warehouse.stock_report",
+          "target_rank": 80,
+          "p@5": 0.0
+        },
+        {
+          "task": "OrderStateMachine.transition",
+          "target_rank": 4,
+          "p@5": 0.6
+        },
+        {
+          "task": "OrderLog.by_status",
+          "target_rank": 20,
+          "p@5": 0.2
+        },
+        {
+          "task": "Customer.can_afford",
+          "target_rank": 15,
+          "p@5": 0.6
+        },
+        {
+          "task": "Order.__len__",
+          "target_rank": 63,
+          "p@5": 0.0
+        },
+        {
+          "task": "BulkDiscountPricing.price",
+          "target_rank": 41,
+          "p@5": 0.6
+        },
+        {
+          "task": "EventBus.__contains__",
+          "target_rank": 9,
+          "p@5": 1.0
+        },
+        {
+          "task": "Money.__bool__",
+          "target_rank": 144,
+          "p@5": 0.4
+        }
+      ]
+    }
+  },
+  "mxbai-large": {
+    "model": "mixedbread-ai/mxbai-embed-large-v1",
+    "dims": 1024,
+    "params_M": 335,
+    "max_tokens": 512,
+    "truncated": 36,
+    "load_s": 54.5,
+    "embed_s": 75.4,
+    "full": {
+      "MRR": 0.8666666666666666,
+      "Hit@1": 0.8,
+      "Hit@5": 1.0,
+      "P@5": 0.78,
+      "per_task": [
+        {
+          "task": "OrderStatus.is_terminal",
+          "target_rank": 1,
+          "p@5": 0.4
+        },
+        {
+          "task": "InventoryLedger.__contains__",
+          "target_rank": 1,
+          "p@5": 1.0
+        },
+        {
+          "task": "Warehouse.stock_report",
+          "target_rank": 1,
+          "p@5": 0.4
+        },
+        {
+          "task": "OrderStateMachine.transition",
+          "target_rank": 1,
+          "p@5": 0.8
+        },
+        {
+          "task": "OrderLog.by_status",
+          "target_rank": 1,
+          "p@5": 0.8
+        },
+        {
+          "task": "Customer.can_afford",
+          "target_rank": 1,
+          "p@5": 1.0
+        },
+        {
+          "task": "Order.__len__",
+          "target_rank": 3,
+          "p@5": 0.4
+        },
+        {
+          "task": "BulkDiscountPricing.price",
+          "target_rank": 3,
+          "p@5": 1.0
+        },
+        {
+          "task": "EventBus.__contains__",
+          "target_rank": 1,
+          "p@5": 1.0
+        },
+        {
+          "task": "Money.__bool__",
+          "target_rank": 1,
+          "p@5": 1.0
+        }
+      ]
+    },
+    "doc": {
+      "MRR": 0.24475579975579978,
+      "Hit@1": 0.1,
+      "Hit@5": 0.3,
+      "P@5": 0.5599999999999999,
+      "per_task": [
+        {
+          "task": "OrderStatus.is_terminal",
+          "target_rank": 13,
+          "p@5": 0.0
+        },
+        {
+          "task": "InventoryLedger.__contains__",
+          "target_rank": 12,
+          "p@5": 0.8
+        },
+        {
+          "task": "Warehouse.stock_report",
+          "target_rank": 20,
+          "p@5": 0.0
+        },
+        {
+          "task": "OrderStateMachine.transition",
+          "target_rank": 2,
+          "p@5": 0.6
+        },
+        {
+          "task": "OrderLog.by_status",
+          "target_rank": 1,
+          "p@5": 0.6
+        },
+        {
+          "task": "Customer.can_afford",
+          "target_rank": 3,
+          "p@5": 0.8
+        },
+        {
+          "task": "Order.__len__",
+          "target_rank": 36,
+          "p@5": 0.2
+        },
+        {
+          "task": "BulkDiscountPricing.price",
+          "target_rank": 7,
+          "p@5": 0.6
+        },
+        {
+          "task": "EventBus.__contains__",
+          "target_rank": 6,
+          "p@5": 1.0
+        },
+        {
+          "task": "Money.__bool__",
+          "target_rank": 15,
+          "p@5": 1.0
+        }
+      ]
+    }
+  }
+}

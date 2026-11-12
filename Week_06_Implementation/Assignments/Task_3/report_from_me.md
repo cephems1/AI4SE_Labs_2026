@@ -1,0 +1,1 @@
+Kazdy chunk sme embeddedovali s lokalnym modelm mxbai-embed-large-v1. Embedovany je kazdeho chunku text, context header a source code. Je to ulozeen ako normalizovana numpy matrix. 
